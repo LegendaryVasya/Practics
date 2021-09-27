@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace practic4
 {
@@ -6,7 +7,22 @@ namespace practic4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ArrayList myList = new ArrayList(); 
+            myList.Add("First"); 
+            myList.Add("Second");
+            myList.Add("Third");
+            myList.Add("Fourth");
+            foreach (string item in myList)
+            {
+                Console.WriteLine("Unsorted: {0}", item);
+            }
+            // Сортировка при помощи стандартного объекта сравнения 
+            myList.Sort();
+            foreach (string item in myList)
+            {
+                Console.WriteLine("Sorted: {0}", item);
+            }
         }
+
     }
 }
