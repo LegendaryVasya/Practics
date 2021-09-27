@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace pract42
 {
@@ -6,7 +7,19 @@ namespace pract42
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            Queue queue = new Queue();
+
+            queue.Enqueue("First");
+            queue.Enqueue("Second");
+            queue.Enqueue("Third");
+            queue.Enqueue("Fourth");
+            while (queue.Count > 0)
+            {
+                object obj = queue.Dequeue();
+                Console.WriteLine("From Queue: {0}", obj);
+
+            }
         }
     }
 }
